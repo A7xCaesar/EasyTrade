@@ -1,0 +1,296 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "EasyTrade Crypto - Home";
+}
+
+
+<div class="container my-5">
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">
+            Welcome to <span class="text-primary">EasyTrade</span>
+        </h1>
+        <p class="lead">
+            A student-focused platform for learning cryptocurrency trading in a risk-free environment.
+        </p>
+        <div class="mt-4">
+            <!-- Redirect -->
+            <a class="btn btn-primary btn-lg me-2" asp-page="/Register">Start Trading</a>
+
+            <a class="btn btn-outline-primary btn-lg" href="#">Learn More</a>
+        </div>
+    </div>
+
+    <!-- Nav Tabs -->
+    <ul class="nav nav-tabs justify-content-center" id="easyTradeTab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="about-tab" data-bs-toggle="tab" data-bs-target="#about"
+                    type="button" role="tab" aria-controls="about" aria-selected="true">
+                About EasyTrade
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="resources-tab" data-bs-toggle="tab" data-bs-target="#resources"
+                    type="button" role="tab" aria-controls="resources" aria-selected="false">
+                Learning Resources
+            </button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="features-tab" data-bs-toggle="tab" data-bs-target="#features"
+                    type="button" role="tab" aria-controls="features" aria-selected="false">
+                Features
+            </button>
+        </li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content my-4" id="easyTradeTabContent">
+
+        <!-- About EasyTrade -->
+        <div class="tab-pane fade show active" id="about" role="tabpanel" aria-labelledby="about-tab">
+            <div class="row mt-4">
+                <div class="col-md-6 mb-4">
+                    <h4 class="fw-bold">
+                        <i class="bi bi-bookmark-star-fill me-2 text-primary"></i> Educational Platform
+                    </h4>
+                    <p>
+                        EasyTrade is designed specifically for students to learn cryptocurrency trading
+                        without financial risk. Our platform simulates real market conditions, allowing you
+                        to practice trading strategies in a safe environment.
+                    </p>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <h4 class="fw-bold">
+                        <i class="bi bi-shield-check me-2 text-primary"></i> Risk-Free Learning
+                    </h4>
+                    <p>
+                        Invest with virtual currency that mimics real-world value. Make mistakes, learn
+                        from them, and develop your trading skills without risking actual money—perfect
+                        for students who want to understand crypto markets.
+                    </p>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <h4 class="fw-bold">
+                        <i class="bi bi-people-fill me-2 text-primary"></i> Developed By Students, For Students
+                    </h4>
+                    <p>
+                        EasyTrade was created as a student project to address the need for practical
+                        cryptocurrency trading education. Our platform is tailored to make the learning
+                        curve less steep and more engaging.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning Resources -->
+        <div class="tab-pane fade" id="resources" role="tabpanel" aria-labelledby="resources-tab">
+            <div class="row row-cols-1 row-cols-md-2 g-4 mt-4">
+                <!-- Box 1: Cryptocurrency Basics -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-coin text-primary me-2"></i> Cryptocurrency Basics
+                            </h5>
+                            <p class="card-text">
+                                Fundamental concepts for beginners:
+                            </p>
+                            <ul>
+                                <li>Blockchain technology</li>
+                                <li>Different types of cryptocurrencies</li>
+                                <li>Wallets and security best practices</li>
+                                <li>Decentralized vs. centralized exchanges</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Box 2: Trading Strategies -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-lightbulb-fill text-primary me-2"></i> Trading Strategies
+                            </h5>
+                            <p class="card-text">
+                                Techniques to improve your trading:
+                            </p>
+                            <ul>
+                                <li>Technical analysis fundamentals</li>
+                                <li>Reading candlestick patterns</li>
+                                <li>Risk management principles</li>
+                                <li>Short-term vs. long-term strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Features -->
+        <div class="tab-pane fade" id="features" role="tabpanel" aria-labelledby="features-tab">
+            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                <!-- Feature Box 1: Real-Time Market Data -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-speedometer2 text-primary me-2"></i> Real-Time Market Data
+                            </h5>
+                            <p class="card-text">
+                                Practice with actual market data to simulate authentic trading conditions.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature Box 2: Portfolio Analytics -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-bar-chart-line-fill text-primary me-2"></i> Portfolio Analytics
+                            </h5>
+                            <p class="card-text">
+                                Track your trades with detailed analytics and visualizations of your trading history.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Feature Box 3: Achievements & Challenges -->
+                <div class="col">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">
+                                <i class="bi bi-trophy-fill text-primary me-2"></i> Achievements & Challenges
+                            </h5>
+                            <p class="card-text">
+                                Complete trading challenges to earn badges and track your progress as you learn.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Platform Comparison Table -->
+            <div class="mt-5">
+                <h5 class="fw-bold mb-3">
+                    <i class="bi bi-table text-primary me-2"></i> Platform Comparison
+                </h5>
+                <div class="table-responsive">
+                    <table class="table table-bordered align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Feature</th>
+                                <th>EasyTrade</th>
+                                <th>Real Trading Platforms</th>
+                                <th>Other Simulators</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Financial Risk</td>
+                                <td>No real loss</td>
+                                <td>High</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>Real Market Data</td>
+                                <td>Yes</td>
+                                <td>Yes</td>
+                                <td>Varies</td>
+                            </tr>
+                            <tr>
+                                <td>Educational Resources</td>
+                                <td>Comprehensive</td>
+                                <td>Limited</td>
+                                <td>Basic</td>
+                            </tr>
+                            <tr>
+                                <td>Student-Focused</td>
+                                <td>Yes</td>
+                                <td>No</td>
+                                <td>Sometimes</td>
+                            </tr>
+                            <tr>
+                                <td>Performance Analytics</td>
+                                <td>Detailed</td>
+                                <td>Detailed</td>
+                                <td>Basic</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- How It Works Section -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">How It Works</h2>
+    </div>
+    <div class="row text-center">
+        <div class="col-md-4 mb-4">
+            <i class="bi bi-person-plus-fill fs-1 text-primary mb-3"></i>
+            <h5>Create an Account</h5>
+            <p>Sign up for free and receive virtual funds to start your trading journey.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="bi bi-lightning-charge-fill fs-1 text-primary mb-3"></i>
+            <h5>Learn & Practice</h5>
+            <p>Access educational resources and practice trading with real-time market data.</p>
+        </div>
+        <div class="col-md-4 mb-4">
+            <i class="bi bi-graph-up-arrow fs-1 text-primary mb-3"></i>
+            <h5>Track Progress</h5>
+            <p>Monitor your performance, analyze your trades, and improve your strategies over time.</p>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <!-- Testimonials Section -->
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">What Students Say</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">
+                        “EasyTrade has been an invaluable tool for my finance studies.
+                        I can apply what I learn in class to real market scenarios without
+                        risking my limited student budget.”
+                    </p>
+                </div>
+                <div class="card-footer text-muted">John Doe, Finance Major</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">
+                        “I’ve always been interested in both technology and finance.
+                        EasyTrade provides a perfect playground to understand
+                        blockchain applications and cryptocurrency markets.”
+                    </p>
+                </div>
+                <div class="card-footer text-muted">Alice Smith, Computer Science Student</div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4 shadow-sm">
+                <div class="card-body">
+                    <p class="card-text">
+                        “I wish I had EasyTrade when I was still in school. It’s the perfect
+                        bridge between theoretical knowledge and practical trading experience
+                        for students!”
+                    </p>
+                </div>
+                <div class="card-footer text-muted">Michael Johnson, Economics Graduate</div>
+            </div>
+        </div>
+    </div>
+</div>

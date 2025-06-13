@@ -1,0 +1,147 @@
+﻿@page
+@model EasyTrade_Crypto.Pages.TradingViewModel
+@{
+    ViewData["Title"] = "Trading";
+}
+@using System.Security.Claims
+
+<div class="container my-5">
+    <div class="row g-4">
+        <!-- Left Column: TradingView Widget -->
+        <div class="col-lg-8">
+            <h3 class="mb-3">Live Crypto Chart</h3>
+            <div class="card p-3 shadow-sm" style="height: 600px;">
+                <!-- TradingView Widget BEGIN -->
+                <div class="tradingview-widget-container" style="height:100%; width:100%;">
+                    <div class="tradingview-widget-container__widget" style="height:100%; width:100%;">
+                    </div>
+                    <div class="text-end small mt-2">
+                        <a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank">
+                            <span class="text-primary">Track all markets on TradingView</span>
+                        </a>
+                    </div>
+                    <script type="text/javascript"
+                            src="https://s3.tradingview.com/external-embedding/embed-widget-advanced-chart.js"
+                            async>
+                        {
+                            "autosize": true,
+                            "symbol": "COINBASE:BTCEUR",
+                            "interval": "5",
+                            "timezone": "Etc/UTC",
+                            "theme": "dark",
+                            "style": "1",
+                            "locale": "en",
+                            "allow_symbol_change": true,
+                            "details": true,
+                            "support_host": "https://www.tradingview.com"
+                        }
+                    </script>
+                </div>
+                <!-- TradingView Widget END -->
+            </div>
+        </div>
+
+        <!-- Right Column: Dashboard and Trade Panel -->
+        <div class="col-lg-4">
+            <!-- New Portfolio Dashboard Section -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <h5 class="card-title text-center">My Dashboard</h5>
+                    <hr />
+                    <a asp-page="/Portfolio" class="btn btn-outline-primary w-100">
+                        View Portfolio
+                    </a>
+                    @if (User.Identity != null && User.Identity.IsAuthenticated)
+                    {
+                        var emailClaim = User.FindFirst(ClaimTypes.Email);
+                        if (emailClaim != null)
+                        {
+                            <p class="card-text text-muted small mt-3 mb-0 text-center">
+                                Logged in as: @emailClaim.Value
+                            </p>
+                        }
+                    }
+                </div>
+            </div>
+
+            <!-- Existing Trade Panel -->
+            <h3 class="mb-3">Trade</h3>
+            <form method="post">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <!-- Toggle Buy/Sell Buttons -->
+                    <div class="btn-group w-100 mb-3" role="group" aria-label="Buy or Sell">
+                        <button type="button" class="btn btn-primary">Buy</button>
+                        <button type="button" class="btn btn-outline-primary">Sell</button>
+                    </div>
+
+                    <!-- Asset Selection Dashboard -->
+                    <div class="mb-3">
+                        <label class="form-label">Asset</label>
+                        <div class="table-responsive" style="max-height: 250px; overflow-y: auto;">
+                            <table class="table table-sm table-hover mb-0">
+                                <thead class="table-light sticky-top">
+                                    <tr>
+                                        <th scope="col">Symbol</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col" class="text-end">Price (€)</th>
+                                        <th scope="col" class="text-end">Last Updated</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var crypto in Model.Cryptos)
+                                    {
+                                        <tr class="selectable-asset" data-symbol="@crypto.Symbol">
+                                            <td>@crypto.Symbol</td>
+                                            <td>@crypto.Name</td>
+                                            <td class="text-end">@crypto.CurrentPrice.ToString("C2", System.Globalization.CultureInfo.CreateSpecificCulture("en-IE"))</td>
+                                            <td class="text-end">@crypto.LastUpdated.ToString("g")</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <input type="hidden" id="selectedAssetSymbol" name="SelectedSymbol" />
+                        <small class="form-text text-muted">Click an asset row to select it for trading.</small>
+                    </div>
+
+                    <!-- Amount -->
+                    <div class="mb-3">
+                        <label for="amount" class="form-label">Amount</label>
+                        <input type="number" step="0.0001" class="form-control" id="amount" name="Quantity" placeholder="0.00" />
+                    </div>
+
+                    <!-- Buy/Sell Button -->
+                    <input type="hidden" name="TradeType" id="tradeTypeHidden" value="buy" />
+                    <button type="submit" formaction="?handler=Trade" class="btn btn-primary w-100" id="tradeButton" disabled>Execute Trade</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        (() => {
+            const rows = document.querySelectorAll('.selectable-asset');
+            const hidden = document.getElementById('selectedAssetSymbol');
+            const tradeBtn = document.getElementById('tradeButton');
+
+            rows.forEach(r => {
+                r.addEventListener('click', () => {
+                    rows.forEach(x => x.classList.remove('table-active'));
+                    r.classList.add('table-active');
+                    hidden.value = r.dataset.symbol;
+                    tradeBtn.disabled = false;
+                });
+            });
+
+            const buyBtn = document.querySelector('.btn-group button:first-child');
+            const sellBtn = document.querySelector('.btn-group button:last-child');
+            const tradeTypeHidden = document.getElementById('tradeTypeHidden');
+            buyBtn.addEventListener('click', () => { buyBtn.classList.add('btn-primary'); sellBtn.classList.remove('btn-primary'); tradeTypeHidden.value = 'buy'; });
+            sellBtn.addEventListener('click', () => { sellBtn.classList.add('btn-primary'); buyBtn.classList.remove('btn-primary'); tradeTypeHidden.value = 'sell'; });
+        })();
+    </script>
+}

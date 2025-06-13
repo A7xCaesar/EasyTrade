@@ -1,0 +1,17 @@
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\bin\Debug\net8.0\MSSQL.deps.json
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\bin\Debug\net8.0\MSSQL.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\bin\Debug\net8.0\MSSQL.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\bin\Debug\net8.0\DTO.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\bin\Debug\net8.0\Interfaces.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\bin\Debug\net8.0\Interfaces.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\bin\Debug\net8.0\DTO.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\MSSQL.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\MSSQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\MSSQL.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\MSSQL.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\MSSQL.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\MSSQL.csproj.Up2Date
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\MSSQL.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\refint\MSSQL.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\MSSQL.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\MSSQL\obj\Debug\net8.0\ref\MSSQL.dll

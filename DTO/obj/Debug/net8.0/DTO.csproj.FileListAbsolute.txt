@@ -1,0 +1,11 @@
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\bin\Debug\net8.0\DTO.deps.json
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\bin\Debug\net8.0\DTO.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\bin\Debug\net8.0\DTO.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\obj\Debug\net8.0\DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\obj\Debug\net8.0\DTO.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\obj\Debug\net8.0\DTO.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\obj\Debug\net8.0\DTO.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\obj\Debug\net8.0\DTO.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\obj\Debug\net8.0\refint\DTO.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\obj\Debug\net8.0\DTO.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\DTO\obj\Debug\net8.0\ref\DTO.dll

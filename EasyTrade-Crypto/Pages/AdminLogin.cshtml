@@ -1,0 +1,62 @@
+@page "/admin/login"
+@model EasyTrade_Crypto.Pages.AdminLoginModel
+@{
+    ViewData["Title"] = "Admin Login";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-6 col-lg-4">
+            <div class="card shadow">
+                <div class="card-header bg-primary text-white text-center">
+                    <h4 class="mb-0">
+                        <i class="bi bi-shield-lock"></i> Admin Login
+                    </h4>
+                </div>
+                <div class="card-body">
+                    @if (!string.IsNullOrEmpty(Model.ErrorMessage))
+                    {
+                        <div class="alert alert-danger" role="alert">
+                            <i class="bi bi-exclamation-triangle"></i> @Model.ErrorMessage
+                        </div>
+                    }
+
+                    <form method="post">
+                        <div class="mb-3">
+                            <label asp-for="LoginModel.Username" class="form-label">
+                                <i class="bi bi-person"></i> Username
+                            </label>
+                            <input asp-for="LoginModel.Username" class="form-control" placeholder="Enter admin username" required />
+                            <span asp-validation-for="LoginModel.Username" class="text-danger"></span>
+                        </div>
+
+                        <div class="mb-3">
+                            <label asp-for="LoginModel.Password" class="form-label">
+                                <i class="bi bi-lock"></i> Password
+                            </label>
+                            <input asp-for="LoginModel.Password" type="password" class="form-control" placeholder="Enter admin password" required />
+                            <span asp-validation-for="LoginModel.Password" class="text-danger"></span>
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="bi bi-box-arrow-in-right"></i> Login
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="card-footer text-center text-muted">
+                    <small>
+                        <i class="bi bi-info-circle"></i> 
+                        Admin access only - Default: admin/admin123
+                    </small>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+} 

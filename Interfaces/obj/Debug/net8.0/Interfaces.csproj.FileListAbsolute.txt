@@ -1,0 +1,15 @@
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\bin\Debug\net8.0\Interfaces.deps.json
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\bin\Debug\net8.0\Interfaces.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\bin\Debug\net8.0\Interfaces.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\bin\Debug\net8.0\DTO.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\bin\Debug\net8.0\DTO.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\Interfaces.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\Interfaces.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\Interfaces.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\Interfaces.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\Interfaces.csproj.Up2Date
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\Interfaces.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\refint\Interfaces.dll
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\Interfaces.pdb
+C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Interfaces\obj\Debug\net8.0\ref\Interfaces.dll

@@ -1,0 +1,150 @@
+@page
+@model EasyTrade_Crypto.Pages.PortfolioModel
+@{
+    ViewData["Title"] = "Portfolio";
+}
+
+<div class="container my-4">
+    <div class="row">
+        <!-- Portfolio Summary -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">
+                        <i class="bi bi-wallet2 me-2 text-primary"></i>Portfolio Summary
+                    </h5>
+                    <div class="mt-3">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span class="text-muted">Total Value</span>
+                            <span class="fw-bold">$@Model.Portfolio.TotalValue.ToString("N2")</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Chart -->
+        <div class="col-md-8 mb-4">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h5 class="card-title fw-bold">
+                        <i class="bi bi-graph-up me-2 text-primary"></i>Portfolio Performance
+                    </h5>
+                    <div class="mt-3">
+                        <canvas id="portfolioChart" height="200"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Assets Table -->
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">
+                <i class="bi bi-currency-bitcoin me-2 text-primary"></i>Your Asset Balances
+            </h5>
+            <div class="table-responsive mt-3">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Asset</th>
+                            <th>Quantity</th>
+                            <th>Current Price</th>
+                            <th>Total Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var asset in Model.Portfolio.AssetBalances)
+                        {
+                            <tr>
+                                <td>
+                                    <div class="d-flex align-items-center">
+                                        <span class="fw-bold">@asset.Symbol</span>
+                                        <span class="text-muted ms-2">@asset.Name</span>
+                                    </div>
+                                </td>
+                                <td>@asset.Amount.ToString("N4")</td>
+                                <td>$@asset.CurrentPrice.ToString("N2")</td>
+                                <td>$@asset.TotalValue.ToString("N2")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trade History -->
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <h5 class="card-title fw-bold">
+                <i class="bi bi-clock-history me-2 text-primary"></i>Trade History
+            </h5>
+            <div class="table-responsive mt-3">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Asset</th>
+                            <th>Type</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Total Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var trade in Model.Portfolio.TradeHistory)
+                        {
+                            <tr>
+                                <td>@trade.Timestamp.ToString("MM/dd/yyyy HH:mm")</td>
+                                <td>@trade.Symbol</td>
+                                <td>
+                                    <span class="badge @(trade.Type == "Buy" ? "bg-success" : "bg-danger")">
+                                        @trade.Type
+                                    </span>
+                                </td>
+                                <td>@trade.Quantity.ToString("N4")</td>
+                                <td>$@trade.Price.ToString("N2")</td>
+                                <td>$@trade.TotalValue.ToString("N2")</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Initialize portfolio performance chart
+        const ctx = document.getElementById('portfolioChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+                datasets: [{
+                    label: 'Portfolio Value',
+                    data: [10000, 12000, 11500, 13000, 12500, 14000],
+                    borderColor: '#0d6efd',
+                    tension: 0.1
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        display: false
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false
+                    }
+                }
+            }
+        });
+    </script>
+} 
