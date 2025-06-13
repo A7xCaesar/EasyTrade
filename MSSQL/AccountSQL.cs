@@ -1,19 +1,18 @@
 ﻿using EasyTrade_Crypto.Interfaces; 
 using Microsoft.Data.SqlClient;
 using System;
+using System.Data;
 
 namespace EasyTrade_Crypto.DAL.MSSQL
 {
    
         public class AccountSQL : IAccountDAL
         {
-            private readonly string _connectionString;
+            private readonly IDbConnectionStringProvider _connectionProvider;
 
-            public AccountSQL(string connectionString)
+            public AccountSQL(IDbConnectionStringProvider connectionProvider)
             {
-                if (string.IsNullOrWhiteSpace(connectionString))
-                    throw new ArgumentNullException(nameof(connectionString), "Database connection string cannot be null or empty.");
-                _connectionString = connectionString;
+                _connectionProvider = connectionProvider ?? throw new ArgumentNullException(nameof(connectionProvider));
             }
 
             public bool GetUserCredentialsByEmail(string email, out string? userId, out string? username, out string? storedPasswordHash, out string? roleName, out string errorMessage) // <-- Add roleName
@@ -29,7 +28,7 @@ namespace EasyTrade_Crypto.DAL.MSSQL
 
                 try
                 {
-                    using (var conn = new SqlConnection(_connectionString))
+                    using (var conn = new SqlConnection(_connectionProvider.ConnectionString))
                     using (var cmd = new SqlCommand(sql, conn))
                     {
                         cmd.Parameters.AddWithValue("@email", email);
@@ -75,7 +74,7 @@ namespace EasyTrade_Crypto.DAL.MSSQL
 
                 try
                 {
-                    using (SqlConnection conn = new SqlConnection(_connectionString))
+                    using (SqlConnection conn = new SqlConnection(_connectionProvider.ConnectionString))
                     using (SqlCommand cmd = new SqlCommand(sql, conn))
                     {
 

@@ -10,7 +10,7 @@ namespace EasyTrade_Crypto.Pages
 {
     public class TradingViewModel : PageModel
     {
-        private readonly IAdminCryptoService _cryptoService;
+        private readonly IReadOnlyCryptoService _cryptoService;
         private readonly ITradeService _tradeService;
 
         [BindProperty]
@@ -24,7 +24,7 @@ namespace EasyTrade_Crypto.Pages
 
         public List<CryptoDTO> Cryptos { get; private set; } = new();
 
-        public TradingViewModel(IAdminCryptoService cryptoService, ITradeService tradeService)
+        public TradingViewModel(IReadOnlyCryptoService cryptoService, ITradeService tradeService)
         {
             _cryptoService = cryptoService;
             _tradeService = tradeService;

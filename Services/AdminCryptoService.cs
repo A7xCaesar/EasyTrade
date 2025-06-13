@@ -5,7 +5,7 @@ using EasyTrade_Crypto.Interfaces;
 
 namespace EasyTrade_Crypto.Services
 {
-    public class AdminCryptoService : IAdminCryptoService
+    public class AdminCryptoService : IReadOnlyCryptoService, IManageCryptoService
     {
         private readonly IAdminCryptoDAL _adminCryptoDAL;
 
@@ -88,6 +88,15 @@ namespace EasyTrade_Crypto.Services
             }
 
             return await _adminCryptoDAL.SetCryptocurrencyStatusAsync(assetId, isActive);
+        }
+
+        public async Task<bool> CryptocurrencyExistsAsync(string symbol)
+        {
+            if (string.IsNullOrWhiteSpace(symbol))
+            {
+                return false;
+            }
+            return await _adminCryptoDAL.CryptocurrencyExistsAsync(symbol);
         }
     }
 } 

@@ -4,16 +4,17 @@ using System.Threading.Tasks;
 using Microsoft.Data.SqlClient;
 using DTO;
 using EasyTrade_Crypto.Interfaces;
+using System.Data;
 
 namespace MSSQL
 {
     public class AdminCryptoSQL : IAdminCryptoDAL
     {
-        private readonly string _connectionString;
+        private readonly IDbConnectionStringProvider _connectionProvider;
 
-        public AdminCryptoSQL(string connectionString)
+        public AdminCryptoSQL(IDbConnectionStringProvider connectionProvider)
         {
-            _connectionString = connectionString;
+            _connectionProvider = connectionProvider;
         }
 
         private static string GenerateShortUniqueId()
@@ -25,7 +26,7 @@ namespace MSSQL
         {
             var cryptocurrencies = new List<CryptoDTO>();
             
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"
@@ -70,7 +71,7 @@ namespace MSSQL
         {
             try
             {
-                using (var connection = new SqlConnection(_connectionString))
+                using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
                 {
                     await connection.OpenAsync();
                     
@@ -134,7 +135,7 @@ namespace MSSQL
         {
             try
             {
-                using (var connection = new SqlConnection(_connectionString))
+                using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
                 {
                     await connection.OpenAsync();
 
@@ -202,7 +203,7 @@ namespace MSSQL
         {
             try
             {
-                using (var connection = new SqlConnection(_connectionString))
+                using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
                 {
                     await connection.OpenAsync();
 
@@ -279,7 +280,7 @@ namespace MSSQL
 
         public async Task<CryptoDTO> GetCryptocurrencyByIdAsync(string assetId)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"
@@ -328,7 +329,7 @@ namespace MSSQL
 
         public async Task<bool> CryptocurrencyExistsAsync(string symbol)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"
@@ -343,7 +344,7 @@ namespace MSSQL
         // Helper method to add sample balances for testing
         public async Task AddSampleBalanceAsync(string userId, string assetId, decimal amount)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"

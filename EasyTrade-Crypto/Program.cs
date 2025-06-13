@@ -42,21 +42,22 @@ builder.Services.AddRazorPages(options =>
 
 // Register interfaces and implementations
 builder.Services.AddScoped<IAccountService, AccountService>();
-builder.Services.AddScoped<IAccountDAL>(provider => new AccountSQL(connectionString));
-builder.Services.AddScoped<IAccountManagerSQL>(provider => new AccountManagerSQL(connectionString));
+builder.Services.AddScoped<IAccountDAL, AccountSQL>();
+builder.Services.AddScoped<IAccountManagerSQL, AccountManagerSQL>();
 builder.Services.AddScoped<IAccountManager, AccountManager>();
 builder.Services.AddScoped<IRegistrationService, RegistrationService>();
 
 // Register portfolio services
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
-builder.Services.AddScoped<IPortfolioDAL>(provider => new PortfolioDAL(connectionString));
+builder.Services.AddScoped<IPortfolioDAL, PortfolioDAL>();
 
 // Register admin services
-builder.Services.AddScoped<IAdminCryptoService, AdminCryptoService>();
-builder.Services.AddScoped<IAdminCryptoDAL>(provider => new AdminCryptoSQL(connectionString));
+builder.Services.AddScoped<IReadOnlyCryptoService, AdminCryptoService>();
+builder.Services.AddScoped<IManageCryptoService, AdminCryptoService>();
+builder.Services.AddScoped<IAdminCryptoDAL, AdminCryptoSQL>();
 
 // Register trade services
-builder.Services.AddScoped<ITradeDAL>(provider => new MSSQL.TradeDAL(connectionString));
+builder.Services.AddScoped<ITradeDAL, MSSQL.TradeDAL>();
 builder.Services.AddScoped<ITradeService, TradeService>();
 
 var app = builder.Build();

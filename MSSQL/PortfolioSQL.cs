@@ -72,7 +72,7 @@ namespace MSSQL
             IF EXISTS (SELECT 1 FROM balances WHERE userId = @UserId AND assetId = @AssetId)
             BEGIN
                 UPDATE balances 
-                SET amount = @Amount, lastUpdated = GETDATE()
+                SET amount = amount + @Amount, lastUpdated = GETDATE()
                 WHERE userId = @UserId AND assetId = @AssetId
             END
             ELSE

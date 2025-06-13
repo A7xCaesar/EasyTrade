@@ -31,21 +31,24 @@ builder.Services.AddRazorPages(options =>
 });
 
 // Register services
-builder.Services.AddScoped<IAccountManager>(sp => new AccountManager(connectionString));
+builder.Services.AddScoped<IAccountManager, AccountManager>();
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
-builder.Services.AddScoped<IPortfolioDAL>(sp => new PortfolioDAL(connectionString));
+builder.Services.AddScoped<IPortfolioDAL, PortfolioDAL>();
 
 // Register admin services
-builder.Services.AddScoped<IAdminCryptoDAL>(sp => new AdminCryptoSQL(connectionString));
-builder.Services.AddScoped<IAdminCryptoService, AdminCryptoService>();
+builder.Services.AddScoped<IAdminCryptoDAL, AdminCryptoSQL>();
+builder.Services.AddScoped<IReadOnlyCryptoService, AdminCryptoService>();
+builder.Services.AddScoped<IManageCryptoService, AdminCryptoService>();
 
 // Trade services
-builder.Services.AddScoped<ITradeDAL>(sp => new EasyTrade_Crypto.DAL.MSSQL.TradeDAL(connectionString));
+builder.Services.AddScoped<ITradeDAL, EasyTrade_Crypto.DAL.MSSQL.TradeDAL>();
 builder.Services.AddScoped<ITradeService, TradeService>();
 
 // Register RegistrationService
 builder.Services.AddScoped<IRegistrationService, RegistrationService>();
+
+builder.Services.AddSingleton<IDbConnectionStringProvider, EasyTrade_Crypto.Utilities.ConfigurationConnectionStringProvider>();
 
 var app = builder.Build();
 

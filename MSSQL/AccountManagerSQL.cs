@@ -1,15 +1,16 @@
 ﻿using System;
 using Microsoft.Data.SqlClient;
 using Interfaces;
+using EasyTrade_Crypto.Interfaces;
 namespace EasyTrade_Crypto.MSSQL
 {
     public class AccountManagerSQL : IAccountManagerSQL
     {
-        private readonly string _connectionString;
+        private readonly IDbConnectionStringProvider _connectionProvider;
 
-        public AccountManagerSQL(string connectionString)
+        public AccountManagerSQL(IDbConnectionStringProvider connectionProvider)
         {
-            _connectionString = connectionString;
+            _connectionProvider = connectionProvider;
         }
 
       
@@ -18,7 +19,7 @@ namespace EasyTrade_Crypto.MSSQL
             errorMessage = string.Empty;
             try
             {
-                using (SqlConnection conn = new SqlConnection(_connectionString))
+                using (SqlConnection conn = new SqlConnection(_connectionProvider.ConnectionString))
                 {
                     conn.Open();
 

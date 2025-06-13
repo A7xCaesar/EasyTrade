@@ -49,9 +49,23 @@ namespace EasyTrade_Crypto.Pages
             // Ensure returnUrl is a local path to prevent open-redirect attacks.
             returnUrl ??= Url.Content("~/TradingView");
 
+            // Early return for invalid model state (e.g., missing required fields)
+            if (!ModelState.IsValid)
+            {
+                _logger.LogWarning("Login attempt with invalid model state.");
+                ErrorMessage = "Invalid login attempt.";
+                return Page();
+            }
+
             try
             {
-                _logger.LogInformation("Login attempt for user: {Email}", Input.Email);
+                if (Input == null)
+                {
+                    throw new ArgumentNullException(nameof(Input), "Input model cannot be null.");
+                }
+
+                var emailForLog = Input.Email;
+                _logger.LogInformation("Login attempt for user: {Email}", emailForLog);
 
                 // Use 'out var' to declare variables inline, preventing CS0136.
                 if (_accountService.ValidateUserLogin(Input.Email, Input.Password, out UserLoginInfoDTO userInfo, out string errorMessage))
@@ -89,7 +103,7 @@ namespace EasyTrade_Crypto.Pages
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An unexpected error occurred during login for user: {Email}", Input.Email);
+                _logger.LogError(ex, "An unexpected error occurred during login for user: {Email}", Input?.Email ?? "(null)");
                 ErrorMessage = "An unexpected error occurred. Please try again.";
                 return Page();
             }

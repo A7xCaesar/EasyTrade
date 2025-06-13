@@ -12,11 +12,13 @@ namespace EasyTrade_Crypto.Pages
     [Authorize(Roles = "Admin")]
     public class AdminDashboardModel : PageModel
     {
-        private readonly IAdminCryptoService _adminCryptoService;
+        private readonly IReadOnlyCryptoService _readService;
+        private readonly IManageCryptoService _manageService;
 
-        public AdminDashboardModel(IAdminCryptoService adminCryptoService)
+        public AdminDashboardModel(IReadOnlyCryptoService readService, IManageCryptoService manageService)
         {
-            _adminCryptoService = adminCryptoService;
+            _readService = readService;
+            _manageService = manageService;
         }
 
         [BindProperty]
@@ -46,7 +48,7 @@ namespace EasyTrade_Crypto.Pages
             try
             {
                 Message += " - Calling service...";
-                var result = await _adminCryptoService.AddCryptocurrencyAsync(NewCrypto);
+                var result = await _manageService.AddCryptocurrencyAsync(NewCrypto);
                 
                 if (result.Success)
                 {
@@ -81,10 +83,10 @@ namespace EasyTrade_Crypto.Pages
             }
 
             // Get crypto info for the message
-            var crypto = await _adminCryptoService.GetCryptocurrencyByIdAsync(assetId);
+            var crypto = await _readService.GetCryptocurrencyByIdAsync(assetId);
             var cryptoName = crypto?.Symbol ?? "Unknown";
 
-            var result = await _adminCryptoService.RemoveCryptocurrencyAsync(assetId);
+            var result = await _manageService.RemoveCryptocurrencyAsync(assetId);
             
             if (result.Success)
             {
@@ -113,7 +115,7 @@ namespace EasyTrade_Crypto.Pages
             try
             {
                 Message += " - Calling update service...";
-                var result = await _adminCryptoService.UpdateCryptocurrencyAsync(EditCrypto);
+                var result = await _manageService.UpdateCryptocurrencyAsync(EditCrypto);
                 
                 if (result.Success)
                 {
@@ -148,7 +150,7 @@ namespace EasyTrade_Crypto.Pages
         {
             try
             {
-                Cryptocurrencies = await _adminCryptoService.GetAllCryptocurrenciesAsync();
+                Cryptocurrencies = await _readService.GetAllCryptocurrenciesAsync();
             }
             catch (System.Exception ex)
             {

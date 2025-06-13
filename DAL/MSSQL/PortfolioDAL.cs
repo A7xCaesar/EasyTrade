@@ -11,17 +11,17 @@ namespace EasyTrade_Crypto.DAL.MSSQL
 {
     public class PortfolioDAL : IPortfolioDAL
     {
-        private readonly string _connectionString;
+        private readonly IDbConnectionStringProvider _connectionProvider;
 
-        public PortfolioDAL(string connectionString)
+        public PortfolioDAL(IDbConnectionStringProvider connectionProvider)
         {
-            _connectionString = connectionString;
+            _connectionProvider = connectionProvider;
         }
 
         public async Task<List<AssetBalanceDTO>> GetAssetBalancesAsync(string userId)
         {
             var assetBalances = new List<AssetBalanceDTO>();
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 
@@ -69,7 +69,7 @@ namespace EasyTrade_Crypto.DAL.MSSQL
 
         public async Task<decimal> GetLatestPriceAsync(string assetId)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"
@@ -91,7 +91,7 @@ namespace EasyTrade_Crypto.DAL.MSSQL
         public async Task<List<TradeDTO>> GetTradeHistoryAsync(string userId)
         {
             var trades = new List<TradeDTO>();
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"
@@ -136,7 +136,7 @@ namespace EasyTrade_Crypto.DAL.MSSQL
 
         public async Task<string> GetSymbolByAssetIdAsync(string assetId)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"
@@ -156,7 +156,7 @@ namespace EasyTrade_Crypto.DAL.MSSQL
 
         public async Task<decimal> GetTotalPortfolioValueAsync(string userId)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"
@@ -185,7 +185,7 @@ namespace EasyTrade_Crypto.DAL.MSSQL
         // Additional method to get available cash balance
         public async Task<decimal> GetAvailableCashBalanceAsync(string userId)
         {
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"
@@ -212,7 +212,7 @@ namespace EasyTrade_Crypto.DAL.MSSQL
         public async Task<List<ProfitLossDTO>> GetProfitLossAsync(string userId)
         {
             var profitLossList = new List<ProfitLossDTO>();
-            using (var connection = new SqlConnection(_connectionString))
+            using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
                 var command = new SqlCommand(@"

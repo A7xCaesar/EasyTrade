@@ -8,15 +8,16 @@ namespace MSSQL
 {
     public class TradeDAL : ITradeDAL
     {
-        private readonly string _connectionString;
-        public TradeDAL(string connectionString)
+        private readonly IDbConnectionStringProvider _connectionProvider;
+
+        public TradeDAL(IDbConnectionStringProvider connectionProvider)
         {
-            _connectionString = connectionString;
+            _connectionProvider = connectionProvider;
         }
 
         public async Task<bool> ExecuteTradeAsync(string userId, string symbol, string tradeType, decimal quantity)
         {
-            using var conn = new SqlConnection(_connectionString);
+            using var conn = new SqlConnection(_connectionProvider.ConnectionString);
             await conn.OpenAsync();
             using var tran = await conn.BeginTransactionAsync();
             try
@@ -45,6 +46,47 @@ namespace MSSQL
                     price = Convert.ToDecimal(res);
                 }
 
+                // Validate balances
+                // Fetch current fiat (EUR) assetId
+                string getCashAssetQuery = "SELECT assetId FROM assets WHERE symbol = 'EUR'";
+                string cashAssetId = string.Empty;
+                using (var cmd = new SqlCommand(getCashAssetQuery, conn, (SqlTransaction)tran))
+                {
+                    var res = await cmd.ExecuteScalarAsync();
+                    if (res == null)
+                        throw new Exception("Cash asset not found");
+                    cashAssetId = res.ToString();
+                }
+
+                // Get current balances for validation
+                decimal currentCryptoBalance = 0m;
+                using (var cmd = new SqlCommand(PortfolioSQL.GetBalance, conn, (SqlTransaction)tran))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+                    cmd.Parameters.AddWithValue("@AssetId", assetId);
+                    var res = await cmd.ExecuteScalarAsync();
+                    currentCryptoBalance = res != null ? Convert.ToDecimal(res) : 0m;
+                }
+
+                decimal currentCashBalance = 0m;
+                using (var cmd = new SqlCommand(PortfolioSQL.GetBalance, conn, (SqlTransaction)tran))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+                    cmd.Parameters.AddWithValue("@AssetId", cashAssetId);
+                    var res = await cmd.ExecuteScalarAsync();
+                    currentCashBalance = res != null ? Convert.ToDecimal(res) : 0m;
+                }
+
+                var cost = quantity * price;
+                if (tradeType.ToLower() == "buy" && currentCashBalance < cost)
+                {
+                    throw new Exception("Insufficient cash balance");
+                }
+                if (tradeType.ToLower() == "sell" && currentCryptoBalance < quantity)
+                {
+                    throw new Exception("Insufficient asset balance");
+                }
+
                 // Insert into trades
                 var insertTrade = @"INSERT INTO trades (tradeId, userId, assetId, tradeType, quantity, price, timestamp)
                                      VALUES (@tradeId, @userId, @assetId, @tradeType, @quantity, @price, GETDATE())";
@@ -71,7 +113,23 @@ namespace MSSQL
                     await cmd.ExecuteNonQueryAsync();
                 }
 
-                // Commit
+                // Update cash balance (EUR)
+                decimal cashDelta = tradeType.ToLower() == "buy" ? -cost : cost;
+                using (var cmd = new SqlCommand(upsert, conn, (SqlTransaction)tran))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+                    cmd.Parameters.AddWithValue("@AssetId", cashAssetId);
+                    cmd.Parameters.AddWithValue("@Amount", cashDelta);
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
+                // Clean up zero balances rows
+                using (var cmd = new SqlCommand(PortfolioSQL.CleanupZeroBalances, conn, (SqlTransaction)tran))
+                {
+                    cmd.Parameters.AddWithValue("@UserId", userId);
+                    await cmd.ExecuteNonQueryAsync();
+                }
+
                 await tran.CommitAsync();
                 return true;
             }
