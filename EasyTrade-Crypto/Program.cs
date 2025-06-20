@@ -10,10 +10,8 @@ using DTO;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
-
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
-                       ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
+// var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
+                      // ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
@@ -22,57 +20,52 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30); 
         options.LoginPath = "/Login";
         options.AccessDeniedPath = "/AccessDenied";
+        options.SlidingExpiration = true;
     });
 
-builder.Services.AddAuthorization(options =>
-{
-    options.AddPolicy("Admin", policy => policy.RequireRole("Admin"));
-});
+builder.Services.AddAuthorization();
 
-
-// Add services to the container.
 builder.Services.AddRazorPages(options =>
 {
-    options.Conventions.AuthorizePage("/Dashboard");
+    options.Conventions.AuthorizePage("/TradingView");
     options.Conventions.AuthorizePage("/Portfolio");
-    options.Conventions.AuthorizePage("/Wallet");
-    options.Conventions.AuthorizePage("/Watchlist");
-    options.Conventions.AuthorizePage("/AdminDashboard", "Admin");
+    options.Conventions.AuthorizePage("/AdminDashboard");
 });
 
-// Register interfaces and implementations
-builder.Services.AddScoped<IAccountService, AccountService>();
+// Register connection string provider
+builder.Services.AddSingleton<IDbConnectionStringProvider, EasyTrade_Crypto.Utilities.ConfigurationConnectionStringProvider>();
+
+// Register DAL services
 builder.Services.AddScoped<IAccountDAL, AccountSQL>();
 builder.Services.AddScoped<IAccountManagerSQL, AccountManagerSQL>();
+builder.Services.AddScoped<IPortfolioDAL, MSSQL.PortfolioDAL>();
+builder.Services.AddScoped<IPortfolioSQL, MSSQL.PortfolioSQL>();
+builder.Services.AddScoped<IAdminCryptoDAL, AdminCryptoSQL>();
+builder.Services.AddScoped<ITradeDAL, MSSQL.TradeDAL>();
+
+// Register business services
 builder.Services.AddScoped<IAccountManager, AccountManager>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IRegistrationService, RegistrationService>();
-
-// Register portfolio services
 builder.Services.AddScoped<IPortfolioService, PortfolioService>();
-builder.Services.AddScoped<IPortfolioDAL, PortfolioDAL>();
-
-// Register admin services
 builder.Services.AddScoped<IReadOnlyCryptoService, AdminCryptoService>();
 builder.Services.AddScoped<IManageCryptoService, AdminCryptoService>();
-builder.Services.AddScoped<IAdminCryptoDAL, AdminCryptoSQL>();
-
-// Register trade services
-builder.Services.AddScoped<ITradeDAL, MSSQL.TradeDAL>();
 builder.Services.AddScoped<ITradeService, TradeService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error");
+    app.UseHsts();
 }
 
+app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
 
-app.UseAuthentication(); 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapRazorPages();

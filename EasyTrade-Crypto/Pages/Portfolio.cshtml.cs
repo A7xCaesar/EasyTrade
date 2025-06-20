@@ -15,7 +15,7 @@ namespace EasyTrade_Crypto.Pages
         private readonly IPortfolioService _portfolioService;
         private readonly ILogger<PortfolioModel> _logger;
 
-        public PortfolioDTO Portfolio { get; set; }
+        public required PortfolioDTO Portfolio { get; set; }
 
         public PortfolioModel(IPortfolioService portfolioService, ILogger<PortfolioModel> logger)
         {

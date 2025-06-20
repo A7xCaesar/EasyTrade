@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WQ3hsOX6deE=",
+  "dgSpecHash": "GS3jt0sPHk0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj",
+  "projectFilePath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",

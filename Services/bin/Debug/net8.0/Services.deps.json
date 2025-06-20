@@ -9,6 +9,7 @@
       "Services/1.0.0": {
         "dependencies": {
           "DTO": "1.0.0",
+          "Interfaces": "1.0.0",
           "Managers": "1.0.0",
           "Microsoft.Extensions.Logging": "9.0.6",
           "Models": "1.0.0",
@@ -548,7 +549,8 @@
       "Utilities/1.0.0": {
         "dependencies": {
           "Interfaces": "1.0.0",
-          "Microsoft.Extensions.Configuration": "8.0.0"
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
         },
         "runtime": {
           "Utilities.dll": {

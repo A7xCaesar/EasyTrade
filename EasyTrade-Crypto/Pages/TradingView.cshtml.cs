@@ -45,8 +45,32 @@ namespace EasyTrade_Crypto.Pages
                 return RedirectToPage("/Login");
             }
 
+            // Validate input
+            if (string.IsNullOrWhiteSpace(SelectedSymbol))
+            {
+                ModelState.AddModelError(string.Empty, "Please select an asset to trade.");
+                await OnGetAsync();
+                return Page();
+            }
+
+            if (Quantity <= 0)
+            {
+                ModelState.AddModelError(string.Empty, "Please enter a valid quantity greater than zero.");
+                await OnGetAsync();
+                return Page();
+            }
+
             var (success, error) = await _tradeService.ExecuteTradeAsync(userId, SelectedSymbol, TradeType, Quantity);
-            if (!success)
+            
+            if (success)
+            {
+                // Clear form and show success message
+                TempData["SuccessMessage"] = $"✅ Successfully {TradeType.ToLower()} {Quantity:F8} {SelectedSymbol.ToUpper()}!";
+                SelectedSymbol = string.Empty;
+                Quantity = 0;
+                TradeType = "buy";
+            }
+            else
             {
                 ModelState.AddModelError(string.Empty, error);
             }

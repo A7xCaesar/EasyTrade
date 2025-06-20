@@ -5,6 +5,8 @@ using EasyTrade_Crypto.Interfaces;
 using EasyTrade_Crypto.MSSQL; 
 using EasyTrade_Crypto.Utilities;
 using Interfaces;
+using System.Threading.Tasks;
+using Microsoft.Data.SqlClient;
 
 namespace EasyTrade_Crypto.Managers
 {
@@ -12,11 +14,16 @@ namespace EasyTrade_Crypto.Managers
     public class AccountManager : IAccountManager
     {
         private readonly IAccountDAL _accountDAL;
+        private readonly IPortfolioDAL _portfolioDAL;
+        private readonly IDbConnectionStringProvider _connectionProvider;
         private readonly string _normalRoleName = "Normal"; 
+        private const decimal STARTING_EUR_BALANCE = 10000m; // Starting balance for new users
 
-        public AccountManager(IAccountDAL accountDAL)
+        public AccountManager(IAccountDAL accountDAL, IPortfolioDAL portfolioDAL, IDbConnectionStringProvider connectionProvider)
         {
             _accountDAL = accountDAL ?? throw new ArgumentNullException(nameof(accountDAL));
+            _portfolioDAL = portfolioDAL ?? throw new ArgumentNullException(nameof(portfolioDAL));
+            _connectionProvider = connectionProvider ?? throw new ArgumentNullException(nameof(connectionProvider));
         }
 
 
@@ -60,13 +67,69 @@ namespace EasyTrade_Crypto.Managers
             string hashedPassword = BCrypt.Net.BCrypt.HashPassword(dto.Password);
             string userId = IdGenerator.GenerateShortUniqueId();
 
-
+            // Insert user account
             if (!_accountDAL.InsertUser(userId, _normalRoleName, dto.Username, dto.Email, hashedPassword, out string dalError))
             {
                 errorMessage = $"Registration failed: {dalError}";
                 return false;
             }
+
+            // Initialize user with starting EUR balance
+            try
+            {
+                var success = InitializeUserWithStartingBalance(userId).Result;
+                if (!success)
+                {
+                    errorMessage = "Account created but failed to initialize starting balance. Please contact support.";
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                errorMessage = $"Account created but failed to initialize starting balance: {ex.Message}";
+                return false;
+            }
+
             return true;
+        }
+
+        private async Task<bool> InitializeUserWithStartingBalance(string userId)
+        {
+            try
+            {
+                // Get EUR asset ID from the database
+                var eurAssetId = await GetEurAssetIdAsync();
+                if (string.IsNullOrEmpty(eurAssetId))
+                {
+                    return false; // EUR asset not found
+                }
+                
+                // Add starting EUR balance using the portfolio DAL
+                await _portfolioDAL.UpsertBalanceAsync(userId, eurAssetId, STARTING_EUR_BALANCE);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
+        private async Task<string> GetEurAssetIdAsync()
+        {
+            try
+            {
+                using var connection = new SqlConnection(_connectionProvider.ConnectionString);
+                await connection.OpenAsync();
+                
+                using var command = new SqlCommand("SELECT assetId FROM assets WHERE symbol = 'EUR'", connection);
+                var result = await command.ExecuteScalarAsync();
+                
+                return result?.ToString() ?? string.Empty;
+            }
+            catch
+            {
+                return string.Empty;
+            }
         }
 
         // login validation

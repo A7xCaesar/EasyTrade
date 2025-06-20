@@ -1,6 +1,4 @@
-﻿// ---- Tests/PageModels/LoginTests/LoginModelTestBase.cs ----
-
-using Moq;
+﻿using Moq;
 using EasyTrade_Crypto.Pages;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +22,8 @@ namespace EasyTrade_Crypto.Tests.PageModels.LoginTests
         protected readonly LoginModel _loginModel;
         protected readonly HttpContext _httpContext;
 
+
+
         protected LoginModelTestBase()
         {
             _mockAccountService = new Mock<IAccountService>();
@@ -43,7 +43,12 @@ namespace EasyTrade_Crypto.Tests.PageModels.LoginTests
             _loginModel = new LoginModel(_mockAccountService.Object, _mockLogger.Object)
             {
                 PageContext = pageContext,
-                Url = new UrlHelper(actionContext)
+                Url = new UrlHelper(actionContext),
+                Input = new LoginModel.InputModel() 
+                {
+                    Email = "", 
+                    Password = "" 
+                }
             };
         }
 

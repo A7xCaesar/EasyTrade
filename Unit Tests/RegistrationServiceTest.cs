@@ -11,7 +11,7 @@ namespace EasyTrade_Crypto.Tests.Services
     public class RegistrationServiceTests
     {
         private readonly Mock<IAccountManager> _mockAccountManager;
-        private readonly Mock<ILogger<RegistrationService>> _mockLogger; // Add a mock for the logger
+        private readonly Mock<ILogger<RegistrationService>> _mockLogger; 
         private readonly RegistrationService _service;
 
         public RegistrationServiceTests()
@@ -48,7 +48,7 @@ namespace EasyTrade_Crypto.Tests.Services
             Assert.Equal(string.Empty, actualErrorMessage);
             _mockAccountManager.Verify(am => am.RegisterUser(It.IsAny<RegisterDTO>(), out It.Ref<string>.IsAny), Times.Once);
 
-            // You can now also verify that logging occurred
+    
             VerifyLog(LogLevel.Information, "Successfully registered user", Times.Once());
         }
 
@@ -78,12 +78,12 @@ namespace EasyTrade_Crypto.Tests.Services
             Assert.Equal(expectedErrorFromManager, actualErrorMessage);
             _mockAccountManager.Verify(am => am.RegisterUser(It.IsAny<RegisterDTO>(), out It.Ref<string>.IsAny), Times.Once);
 
-            // Verify the warning was logged
+            // Verify log
             VerifyLog(LogLevel.Warning, "Account manager failed to register", Times.Once());
         }
 
         
-        // Helper method to simplify verifying log calls with Moq.
+ 
        
         private void VerifyLog(LogLevel expectedLevel, string expectedMessage, Times times)
         {

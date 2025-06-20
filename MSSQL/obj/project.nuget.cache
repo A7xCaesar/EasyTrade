@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hwsaZ6iJj5k=",
+  "dgSpecHash": "1//eId6bu2A=",
   "success": true,
-  "projectFilePath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj",
+  "projectFilePath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ACER\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\ACER\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",

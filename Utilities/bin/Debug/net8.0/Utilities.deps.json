@@ -9,7 +9,8 @@
       "Utilities/1.0.0": {
         "dependencies": {
           "Interfaces": "1.0.0",
-          "Microsoft.Extensions.Configuration": "8.0.0"
+          "Microsoft.Extensions.Configuration": "8.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0"
         },
         "runtime": {
           "Utilities.dll": {}

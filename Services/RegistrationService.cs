@@ -22,7 +22,7 @@ namespace EasyTrade_Crypto.Services
         {
             _logger.LogInformation("Registration attempt started for user: {Username}", input?.Username);
 
-            // 1. Expanded Validation Logic
+            //   Validation Logic
             if (!IsInputModelValid(input, out errorMessage))
             {
                 // The validation method already logged the specific warning.
@@ -39,7 +39,7 @@ namespace EasyTrade_Crypto.Services
                     ConfirmPassword = input.ConfirmPassword
                 };
 
-                // 2. Call the underlying manager
+                //  Call the underlying manager
                 bool isSuccess = _accountManager.RegisterUser(registerDto, out errorMessage);
 
                 if (isSuccess)
@@ -49,14 +49,14 @@ namespace EasyTrade_Crypto.Services
                 }
                 else
                 {
-                    // This is a known business logic failure (e.g., user exists)
+                    //  known business logic failure (e.g., user exists)
                     _logger.LogWarning("Account manager failed to register user {Username}. Reason: {Reason}", input.Username, errorMessage);
                     return false;
                 }
             }
             catch (Exception ex)
             {
-                // 3. Expanded Error Handling Strategy
+                //  Error Handling
                 _logger.LogError(ex, "An unexpected error occurred during registration for user: {Username}", input.Username);
                 errorMessage = "An unexpected server error occurred. Please try again later.";
                 return false;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {}
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

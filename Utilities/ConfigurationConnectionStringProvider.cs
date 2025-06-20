@@ -1,6 +1,5 @@
 using Microsoft.Extensions.Configuration;
 using EasyTrade_Crypto.Interfaces;
-
 namespace EasyTrade_Crypto.Utilities
 {
     public class ConfigurationConnectionStringProvider : IDbConnectionStringProvider

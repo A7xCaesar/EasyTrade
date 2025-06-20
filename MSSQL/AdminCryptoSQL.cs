@@ -35,7 +35,7 @@ namespace MSSQL
                         a.symbol,
                         a.name,
                         ISNULL(ph.price, 0) as currentPrice,
-                        ISNULL(ph.timestamp, GETDATE()) as lastUpdated
+                        ISNULL(ph.timestamp, GETDATE()) as timestamp
                     FROM assets a
                     LEFT JOIN (
                         SELECT 
@@ -57,7 +57,7 @@ namespace MSSQL
                             Symbol = reader["symbol"].ToString(),
                             Name = reader["name"].ToString(),
                             CurrentPrice = Convert.ToDecimal(reader["currentPrice"]),
-                            LastUpdated = Convert.ToDateTime(reader["lastUpdated"]),
+                            LastUpdated = Convert.ToDateTime(reader["timestamp"]),
                             IsActive = true // Default to true since we're not using this column
                         };
                         cryptocurrencies.Add(crypto);
@@ -289,7 +289,7 @@ namespace MSSQL
                         a.symbol,
                         a.name,
                         ISNULL(ph.price, 0) as currentPrice,
-                        ISNULL(ph.timestamp, GETDATE()) as lastUpdated
+                        ISNULL(ph.timestamp, GETDATE()) as timestamp
                     FROM assets a
                     LEFT JOIN (
                         SELECT 
@@ -312,7 +312,7 @@ namespace MSSQL
                             Symbol = reader["symbol"].ToString(),
                             Name = reader["name"].ToString(),
                             CurrentPrice = Convert.ToDecimal(reader["currentPrice"]),
-                            LastUpdated = Convert.ToDateTime(reader["lastUpdated"]),
+                            LastUpdated = Convert.ToDateTime(reader["timestamp"]),
                             IsActive = true // Default to true
                         };
                     }
@@ -347,24 +347,50 @@ namespace MSSQL
             using (var connection = new SqlConnection(_connectionProvider.ConnectionString))
             {
                 await connection.OpenAsync();
-                var command = new SqlCommand(@"
-                    IF EXISTS (SELECT 1 FROM balances WHERE userId = @userId AND assetId = @assetId)
-                    BEGIN
-                        UPDATE balances 
-                        SET amount = @amount, lastUpdated = GETDATE()
-                        WHERE userId = @userId AND assetId = @assetId
-                    END
-                    ELSE
-                    BEGIN
-                        INSERT INTO balances (userId, assetId, amount, lastUpdated)
-                        VALUES (@userId, @assetId, @amount, GETDATE())
-                    END", connection);
-                
-                command.Parameters.AddWithValue("@userId", userId);
-                command.Parameters.AddWithValue("@assetId", assetId);
-                command.Parameters.AddWithValue("@amount", amount);
-                
-                await command.ExecuteNonQueryAsync();
+                using (var transaction = connection.BeginTransaction())
+                {
+                    try
+                    {
+                        // First, validate that the asset exists
+                        string validateAssetQuery = "SELECT COUNT(1) FROM assets WHERE assetId = @AssetId";
+                        using (var validateCmd = new SqlCommand(validateAssetQuery, connection, transaction))
+                        {
+                            validateCmd.Parameters.AddWithValue("@AssetId", assetId);
+                            var assetExists = Convert.ToInt32(await validateCmd.ExecuteScalarAsync()) > 0;
+                            if (!assetExists)
+                            {
+                                throw new InvalidOperationException($"Cannot create balance for asset '{assetId}' - asset does not exist in system.");
+                            }
+                        }
+
+                        // Now safely upsert the balance
+                        var command = new SqlCommand(@"
+                            IF EXISTS (SELECT 1 FROM balances WHERE userId = @userId AND assetId = @assetId)
+                            BEGIN
+                                UPDATE balances 
+                                SET amount = @amount
+                                WHERE userId = @userId AND assetId = @assetId
+                            END
+                            ELSE
+                            BEGIN
+                                INSERT INTO balances (balanceId, userId, assetId, amount)
+                                VALUES (@balanceId, @userId, @assetId, @amount)
+                            END", connection, transaction);
+                        
+                        command.Parameters.AddWithValue("@userId", userId);
+                        command.Parameters.AddWithValue("@assetId", assetId);
+                        command.Parameters.AddWithValue("@amount", amount);
+                        command.Parameters.AddWithValue("@balanceId", GenerateShortUniqueId());
+                        
+                        await command.ExecuteNonQueryAsync();
+                        transaction.Commit();
+                    }
+                    catch
+                    {
+                        transaction.Rollback();
+                        throw;
+                    }
+                }
             }
         }
     }

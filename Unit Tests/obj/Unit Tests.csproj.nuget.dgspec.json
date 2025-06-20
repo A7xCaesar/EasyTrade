@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Unit Tests\\Unit Tests.csproj": {}
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Unit Tests\\Unit Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj",
         "projectName": "DTO",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -88,14 +88,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj",
         "projectName": "EasyTrade-Crypto",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\EasyTrade-Crypto\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -117,14 +117,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj"
-              },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj"
               }
             }
           }
@@ -189,14 +186,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj",
         "projectName": "Interfaces",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -218,8 +215,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj"
               }
             }
           }
@@ -277,14 +274,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj",
         "projectName": "Managers",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -306,17 +303,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -380,14 +377,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj",
         "projectName": "Models",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -409,11 +406,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj"
               }
             }
           }
@@ -471,14 +468,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj",
         "projectName": "MSSQL",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -500,11 +497,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -568,14 +565,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -597,17 +594,20 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj"
+              },
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -671,14 +671,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Unit Tests\\Unit Tests.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Unit Tests\\Unit Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Unit Tests\\Unit Tests.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Unit Tests\\Unit Tests.csproj",
         "projectName": "Unit Tests",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Unit Tests\\Unit Tests.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Unit Tests\\Unit Tests.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Unit Tests\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Unit Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -700,29 +700,29 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj"
               },
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj"
               }
             }
           }
@@ -806,14 +806,14 @@
         }
       }
     },
-    "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj": {
+    "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj",
+        "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj",
         "projectName": "Utilities",
-        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj",
+        "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj",
         "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\obj\\",
+        "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -835,8 +835,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj": {
-                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj"
+              "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj": {
+                "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj"
               }
             }
           }
@@ -858,6 +858,10 @@
           "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.Extensions.Configuration": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[8.0.0, )"
             }

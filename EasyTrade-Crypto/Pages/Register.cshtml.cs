@@ -12,7 +12,7 @@ namespace EasyTrade_Crypto.Pages.Account
         private readonly IRegistrationService _registrationService;
 
         [BindProperty]
-        public RegisterInputModel Input { get; set; }
+        public required RegisterInputModel Input { get; set; }
 
         public RegisterModel(IRegistrationService registrationService, IConfiguration config)
         {

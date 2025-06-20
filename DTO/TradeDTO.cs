@@ -18,4 +18,16 @@ namespace DTO
         public decimal TotalValue { get; set; }
         public DateTime Timestamp { get; set; }
     }
+
+    public class ProfitLossDTO
+    {
+        public string AssetId { get; set; } = string.Empty;
+        public string Symbol { get; set; } = string.Empty;
+        public string Name { get; set; } = string.Empty;
+        public decimal NetQuantity { get; set; }
+        public decimal NetInvestment { get; set; }
+        public decimal CurrentValue { get; set; }
+        public decimal ProfitLoss { get; set; }
+        public decimal ProfitLossPercentage { get; set; }
+    }
 }

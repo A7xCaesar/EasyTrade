@@ -16,13 +16,13 @@
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\EasyTrade-Crypto.bvhm63ovg6.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-CQrrhpyNIeqveih2UdC78KwET54s4rxEt9gQOH3hxUQ="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1134"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022CQrrhpyNIeqveih2UdC78KwET54s4rxEt9gQOH3hxUQ=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Jun 2025 09:51:56 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1134"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022CQrrhpyNIeqveih2UdC78KwET54s4rxEt9gQOH3hxUQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Jun 2025 11:05:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/EasyTrade-Crypto/EasyTrade-Crypto.bvhm63ovg6.bundle.scp.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\EasyTrade-Crypto.bvhm63ovg6.bundle.scp.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"bvhm63ovg6"},{"Name":"integrity","Value":"sha256-CQrrhpyNIeqveih2UdC78KwET54s4rxEt9gQOH3hxUQ="},{"Name":"label","Value":"_content/EasyTrade-Crypto/EasyTrade-Crypto.bundle.scp.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1134"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022CQrrhpyNIeqveih2UdC78KwET54s4rxEt9gQOH3hxUQ=\u0022"},{"Name":"Last-Modified","Value":"Fri, 13 Jun 2025 09:51:56 GMT"}]]]></ResponseHeaders>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1134"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022CQrrhpyNIeqveih2UdC78KwET54s4rxEt9gQOH3hxUQ=\u0022"},{"Name":"Last-Modified","Value":"Thu, 19 Jun 2025 11:05:35 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/EasyTrade-Crypto/favicon.61n19gt1b8.ico">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</AssetFile>
