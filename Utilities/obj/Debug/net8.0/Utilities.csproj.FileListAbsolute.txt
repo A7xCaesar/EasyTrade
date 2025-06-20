@@ -20,3 +20,21 @@ C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Utilities\obj\Debug\
 C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Utilities\obj\Debug\net8.0\refint\Utilities.dll
 C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Utilities\obj\Debug\net8.0\Utilities.pdb
 C:\Users\ACER\Desktop\Individual Project 2\easytrade-crypto\Utilities\obj\Debug\net8.0\ref\Utilities.dll
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfoInputs.cache
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.AssemblyInfo.cs
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.csproj.CoreCompileInputs.cache
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.sourcelink.json
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.dll
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\refint\Utilities.dll
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.pdb
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\bin\Debug\net8.0\Utilities.deps.json
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\bin\Debug\net8.0\Utilities.dll
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\bin\Debug\net8.0\Utilities.pdb
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\bin\Debug\net8.0\DTO.dll
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\bin\Debug\net8.0\Interfaces.dll
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\bin\Debug\net8.0\Interfaces.pdb
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\bin\Debug\net8.0\DTO.pdb
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.csproj.AssemblyReference.cache
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\Utilities.csproj.Up2Date
+C:\Users\ACER\Desktop\Individual Project 2 - Copy\easytrade-crypto\EasyTrade\Utilities\obj\Debug\net8.0\ref\Utilities.dll

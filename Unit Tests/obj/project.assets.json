@@ -256,6 +256,45 @@
           "buildTransitive/net6.0/_._": {}
         }
       },
+      "Microsoft.Extensions.Configuration/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration.Abstractions": "8.0.0",
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "8.0.0"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        }
+      },
       "Microsoft.Extensions.DependencyInjection/9.0.6": {
         "type": "package",
         "dependencies": {
@@ -1130,6 +1169,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "dependencies": {
+          "Interfaces": "1.0.0",
           "MSSQL": "1.0.0",
           "Services": "1.0.0"
         },
@@ -1222,6 +1262,10 @@
       "Utilities/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Interfaces": "1.0.0",
+          "Microsoft.Extensions.Configuration": "8.0.0"
+        },
         "compile": {
           "bin/placeholder/Utilities.dll": {}
         },
@@ -1637,6 +1681,66 @@
         "lib/netstandard2.0/Microsoft.Extensions.Caching.Memory.xml",
         "microsoft.extensions.caching.memory.8.0.1.nupkg.sha512",
         "microsoft.extensions.caching.memory.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration/8.0.0": {
+      "sha512": "0J/9YNXTMWSZP2p2+nvl8p71zpSwokZXZuJW+VjdErkegAnFdO1XlqtA62SJtgVYHdKu3uPxJHcMR/r35HwFBA==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Configuration.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Configuration.targets",
+        "lib/net462/Microsoft.Extensions.Configuration.dll",
+        "lib/net462/Microsoft.Extensions.Configuration.xml",
+        "lib/net6.0/Microsoft.Extensions.Configuration.dll",
+        "lib/net6.0/Microsoft.Extensions.Configuration.xml",
+        "lib/net7.0/Microsoft.Extensions.Configuration.dll",
+        "lib/net7.0/Microsoft.Extensions.Configuration.xml",
+        "lib/net8.0/Microsoft.Extensions.Configuration.dll",
+        "lib/net8.0/Microsoft.Extensions.Configuration.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
+        "microsoft.extensions.configuration.8.0.0.nupkg.sha512",
+        "microsoft.extensions.configuration.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/8.0.0": {
+      "sha512": "3lE/iLSutpgX1CC0NOW70FJoGARRHbyKmG7dc0klnUZ9Dd9hS6N/POPWhKhMLCEuNN5nXEY5agmlFtH562vqhQ==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "LICENSE.TXT",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/Microsoft.Extensions.Configuration.Abstractions.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Extensions.Configuration.Abstractions.targets",
+        "lib/net462/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/net462/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "lib/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/net6.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "lib/net7.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/net7.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/net8.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
+        "microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.nuspec",
         "useSharedDesignerContext.txt"
       ]
     },
@@ -2915,11 +3019,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Unit Tests\\Unit Tests.csproj",
+      "projectUniqueName": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Unit Tests\\Unit Tests.csproj",
       "projectName": "Unit Tests",
-      "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Unit Tests\\Unit Tests.csproj",
+      "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Unit Tests\\Unit Tests.csproj",
       "packagesPath": "C:\\Users\\ACER\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Unit Tests\\obj\\",
+      "outputPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Unit Tests\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2941,29 +3045,29 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj": {
-              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\DTO\\DTO.csproj"
+            "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\DTO\\DTO.csproj"
             },
-            "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj": {
-              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj"
+            "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\EasyTrade-Crypto.csproj"
             },
-            "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj": {
-              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Interfaces\\Interfaces.csproj"
+            "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\Interfaces.csproj"
             },
-            "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj": {
-              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Managers\\Managers.csproj"
+            "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Managers\\Managers.csproj"
             },
-            "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj": {
-              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Models\\Models.csproj"
+            "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Models\\Models.csproj"
             },
-            "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj": {
-              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\MSSQL\\MSSQL.csproj"
+            "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\MSSQL\\MSSQL.csproj"
             },
-            "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj": {
-              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Services\\Services.csproj"
+            "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Services\\Services.csproj"
             },
-            "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj": {
-              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2\\easytrade-crypto\\Utilities\\Utilities.csproj"
+            "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj": {
+              "projectPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\Utilities.csproj"
             }
           }
         }

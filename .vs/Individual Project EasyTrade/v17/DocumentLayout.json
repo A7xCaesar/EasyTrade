@@ -1,0 +1,89 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3BFDBC21-625A-432B-90BE-8EC88DC28FF6}|EasyTrade-Crypto\\EasyTrade-Crypto.csproj|c:\\users\\acer\\desktop\\individual project 2 - copy\\easytrade-crypto\\easytrade\\easytrade-crypto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BFDBC21-625A-432B-90BE-8EC88DC28FF6}|EasyTrade-Crypto\\EasyTrade-Crypto.csproj|solutionrelative:easytrade-crypto\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A9D04BF9-D978-4A45-B1C1-FB2EC352B8CC}|Utilities\\Utilities.csproj|c:\\users\\acer\\desktop\\individual project 2 - copy\\easytrade-crypto\\easytrade\\utilities\\configurationconnectionstringprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A9D04BF9-D978-4A45-B1C1-FB2EC352B8CC}|Utilities\\Utilities.csproj|solutionrelative:utilities\\configurationconnectionstringprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{189A034A-55D6-442D-93DA-05010FFA13D2}|Interfaces\\Interfaces.csproj|c:\\users\\acer\\desktop\\individual project 2 - copy\\easytrade-crypto\\easytrade\\interfaces\\idbconnectionstringprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{189A034A-55D6-442D-93DA-05010FFA13D2}|Interfaces\\Interfaces.csproj|solutionrelative:interfaces\\idbconnectionstringprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\Program.cs",
+              "RelativeDocumentMoniker": "EasyTrade-Crypto\\Program.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\EasyTrade-Crypto\\Program.cs",
+              "RelativeToolTip": "EasyTrade-Crypto\\Program.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwD4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:55:50.781Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDbConnectionStringProvider.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\IDbConnectionStringProvider.cs",
+              "RelativeDocumentMoniker": "Interfaces\\IDbConnectionStringProvider.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Interfaces\\IDbConnectionStringProvider.cs",
+              "RelativeToolTip": "Interfaces\\IDbConnectionStringProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:54:05.79Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConfigurationConnectionStringProvider.cs",
+              "DocumentMoniker": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\ConfigurationConnectionStringProvider.cs",
+              "RelativeDocumentMoniker": "Utilities\\ConfigurationConnectionStringProvider.cs",
+              "ToolTip": "C:\\Users\\ACER\\Desktop\\Individual Project 2 - Copy\\easytrade-crypto\\EasyTrade\\Utilities\\ConfigurationConnectionStringProvider.cs",
+              "RelativeToolTip": "Utilities\\ConfigurationConnectionStringProvider.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:52:42.394Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 70,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
